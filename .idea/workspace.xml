@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5d49e45-7504-43f4-980c-d3967d178c2d" name="Changes" comment="Ещё не начал корректировать конструктор">
+    <list default="true" id="f5d49e45-7504-43f4-980c-d3967d178c2d" name="Changes" comment="Создал нормальные конструкторы">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,5 +83,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Создал нормальные конструкторы" />
+    <option name="LAST_COMMIT_MESSAGE" value="Создал нормальные конструкторы" />
   </component>
 </project>

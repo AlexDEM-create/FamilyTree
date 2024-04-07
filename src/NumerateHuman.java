@@ -1,4 +1,6 @@
-public class NumerateHuman {
+import java.io.Serializable;
+
+public class NumerateHuman implements Serializable {
     private int id;
     private static int humancount = 0;
 

@@ -29,28 +29,32 @@ public class Main {
         tree.addHumantoTree(human4);
         tree.addHumantoTree(human5);
         tree.addHumantoTree(human6);
-        System.out.println(tree);
-//
-//        //записываем в файл
-//        String filePath = "MyFamilyTree.txt";
+        //System.out.println(tree);
+
+        //записываем в файл
+        String filePath = "MyFamilyTree.txt";
+
 //        try {
 //            FileOutputStream fs = new FileOutputStream(filePath);
 //            ObjectOutputStream os = new ObjectOutputStream(fs);
 //            os.writeObject(tree);
 //            os.close();
+//            System.out.println("Файл MyFamilyTree.txt создан");
+//
 //        } catch (IOException ex) {
 //            ex.printStackTrace();
 //        }
-//
-//        //прочитываем из файла
-//        try {
-//            ObjectInputStream is = new ObjectInputStream(new FileInputStream(filePath));
-//            FamilyTree TreeRestore = (FamilyTree) is.readObject();
-//
-//        }
-//        catch (Exception ex){
-//            ex.printStackTrace();
-//        }
+
+        //прочитываем из файла
+        try {
+            ObjectInputStream is = new ObjectInputStream(new FileInputStream(filePath));
+            FamilyTree TreeRestored = (FamilyTree) is.readObject();
+            System.out.println(TreeRestored);
+
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
 
     }
 
