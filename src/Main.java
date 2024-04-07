@@ -45,16 +45,16 @@ public class Main {
 //            ex.printStackTrace();
 //        }
 
-        //прочитываем из файла
-        try {
-            ObjectInputStream is = new ObjectInputStream(new FileInputStream(filePath));
-            FamilyTree TreeRestored = (FamilyTree) is.readObject();
-            System.out.println(TreeRestored);
-
-        }
-        catch (Exception ex){
-            ex.printStackTrace();
-        }
+//        //прочитываем из файла
+//        try {
+//            ObjectInputStream is = new ObjectInputStream(new FileInputStream(filePath));
+//            FamilyTree TreeRestored = (FamilyTree) is.readObject();
+//            System.out.println(TreeRestored);
+//
+//        }
+//        catch (Exception ex){
+//            ex.printStackTrace();
+//        }
 
     }
 
