@@ -1,3 +1,7 @@
+package Writer;
+
+import FamilyTree.FamilyTree;
+
 import java.io.Serializable;
 
 public interface Writable {

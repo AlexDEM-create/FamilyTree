@@ -1,8 +1,9 @@
+package Human;
+
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
+import java.util.function.*;
 
 
 public class Human implements Serializable {
@@ -14,7 +15,7 @@ public class Human implements Serializable {
     private Human spouse;
     private List<Human> childrenList;
     private List<Human> parentsList;
-//    public Human(String name, Gender gender, LocalDate dob, LocalDate dod, Object father, Object mother) {
+//    public Human.Human(String name, Human.Gender gender, LocalDate dob, LocalDate dod, Object father, Object mother) {
 //    }
 
     public Human(String name, Gender gender, LocalDate dob, LocalDate dod, Human father, Human mother){
@@ -28,9 +29,13 @@ public class Human implements Serializable {
         NumerateHuman numerateHuman = new NumerateHuman();
         id = numerateHuman.gethumanId();
     }
+
     public Human(String name, Gender gender, LocalDate dob, Human father, Human mother) {
         this(name, gender, dob,null, father, mother);
     }
+
+
+
 
     public Human(String name, Gender gender, LocalDate dob) {
         this(name, gender, dob, null, null, null);
@@ -41,20 +46,37 @@ public class Human implements Serializable {
             childrenList.add(child);
         }
     }
-
     public boolean addParents(Human parent) {
         if (parentsList.contains(parent)) {
             return false;
         }
         else if (parent.getGender().equals(Gender.Мужской)) {
-            setFather(parent);
+            if (father == null){
+                setFather(parent);
+                parentsList.add(parent);
+            }
         }
         else if (parent.getGender().equals(Gender.Женский)) {
-            setMother(parent);
+            if (mother == null){
+                setMother(parent);
+                parentsList.add(parent);
+            }
         }
-            parentsList.add(parent);
         return true;
     }
+//    public boolean addParents(Human parent) {
+//        if (parentsList.contains(parent)) {
+//            return false;
+//        }
+//        else if (parent.getGender().equals(Gender.Мужской)) {
+//            setFather(parent);
+//        }
+//        else if (parent.getGender().equals(Gender.Женский)) {
+//            setMother(parent);
+//        }
+//            parentsList.add(parent);
+//        return true;
+//    }
     public List<Human> getParents(){
         return this.parentsList;
     }
@@ -123,6 +145,19 @@ public class Human implements Serializable {
         return father;
     }
 
+
+    public static class  DateOfBirthComparator implements Comparator<Human>{
+        @Override
+        public int compare(Human o1, Human o2) {
+            return o1.dob.compareTo(o2.dob);
+        }
+    }
+    public static class  NameComparator implements Comparator<Human>{
+        @Override
+        public int compare(Human o1, Human o2) {
+            return o1.name.compareTo(o2.name);
+        }
+    }
     @Override
 
     public boolean equals(Object obj) {
@@ -137,6 +172,7 @@ public class Human implements Serializable {
         return Objects.equals(this.getId(), other.getId());
 
         }
+
 
     @Override
 

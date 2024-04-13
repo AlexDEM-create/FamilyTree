@@ -1,5 +1,13 @@
-import java.io.*;
+import FamilyTree.FamilyTree;
+import Human.Human;
+import Writer.FileHandler;
+import Human.Gender;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+import java.util.List;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -17,9 +25,9 @@ public class Main {
         human3.setFather(human1);
         human3.setMother(human2);
         human4.setFather(human3);
-        human5.setFather(human2);
+        human5.setMother(human2);
         human1.addChildren(human3);
-        human2.addChildren(human3);
+        human2.addChildren(human5);
         human3.addSpouse(human5);
 
 
@@ -30,26 +38,39 @@ public class Main {
         tree.addHumantoTree(human5);
         tree.addHumantoTree(human6);
         //System.out.println(tree);
+        List<String>NameList = new ArrayList<>();
 
-        //записываем в файл
-        String filePath = "MyFamilyTree.txt";
-        FileHandler fileHandler = new FileHandler();
-        boolean saveResult = fileHandler.save(tree, filePath);
-        if (saveResult) {
-            System.out.println("FamilyTree saved in a file successfully");
-        } else {
-        System.out.println("FamilyTree saved in a file successfully");
+        for (Human element : tree) {
+            if (element != null) {
+                NameList.add(element.getName());
+                //System.out.println(tree);
+            }
         }
+        tree.sortByDateOfBirth();
+        System.out.println(tree);
+        Collections.sort(NameList);
+        System.out.println(NameList);
+        tree.sortByName();
+        System.out.println(tree);
 
-        //достаём из файла
-        FamilyTree readResult = fileHandler.read(filePath);
-        if (readResult != null) {
-            System.out.println("Объект успешно прочитан из файла");
-            System.out.println(readResult);
-        } else {
-            System.out.println("Ошибка при чтении объекта из файла");
-        }
-
+            //записываем в файл
+//        String filePath = "MyFamilyTree.txt";
+//        FileHandler fileHandler = new FileHandler();
+//        boolean saveResult = fileHandler.save(tree, filePath);
+//        if (saveResult) {
+//            System.out.println("FamilyTree.FamilyTree saved in a file successfully");
+//        } else {
+//        System.out.println("FamilyTree.FamilyTree saved in a file successfully");
+//        }
+//
+//        //достаём из файла
+//        FamilyTree readResult = fileHandler.read(filePath);
+//        if (readResult != null) {
+//            System.out.println("Объект успешно прочитан из файла");
+//            System.out.println(readResult);
+//        } else {
+//            System.out.println("Ошибка при чтении объекта из файла");
+//        }
 
 
 //        try {
@@ -66,7 +87,7 @@ public class Main {
 //        //прочитываем из файла
 //        try {
 //            ObjectInputStream is = new ObjectInputStream(new FileInputStream(filePath));
-//            FamilyTree TreeRestored = (FamilyTree) is.readObject();
+//            FamilyTree.FamilyTree TreeRestored = (FamilyTree.FamilyTree) is.readObject();
 //            System.out.println(TreeRestored);
 //
 //        }
@@ -74,13 +95,12 @@ public class Main {
 //            ex.printStackTrace();
 //        }
 
-    }
+        }
 
 
-
-//    private static FamilyTree TestTree() {
-//        return new FamilyTree();
+//    private static FamilyTree.FamilyTree TestTree() {
+//        return new FamilyTree.FamilyTree();
 //    }
 
 
-}
+    }

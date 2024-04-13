@@ -1,6 +1,10 @@
+package Writer;
+
+import FamilyTree.FamilyTree;
+
 import java.io.*;
 
-public class FileHandler implements Writable{
+public class FileHandler implements Writable {
     public boolean save (Serializable serializable, String filePath) {
 //        try (ObjectInputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(filePath))) {
 //            objectOutputStream.writeObject(serializable);
