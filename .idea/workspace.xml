@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5d49e45-7504-43f4-980c-d3967d178c2d" name="Changes" comment="Создал нормальные конструкторы">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Human/DateOfBirthComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Human/NameComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Dogs/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Dogs/Gender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Dogs/NumerateDog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyFamilyTree.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MyFamilyTree.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FamilyTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FamilyTree/FamilyTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Writer/FileHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human/Gender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human/Human.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NumerateHuman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human/NumerateHuman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Writable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Writer/Writable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,10 +47,16 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/Users/aleksejdemkin/Downloads/FamilyTree",
+    "last_opened_file_path": "/Users/aleksejdemkin/Downloads/FamilyTree/src/Dogs",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Dogs" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
