@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5d49e45-7504-43f4-980c-d3967d178c2d" name="Changes" comment="Создал нормальные конструкторы">
-      <change afterPath="$PROJECT_DIR$/src/Dogs/Dog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Dogs/Gender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Dogs/NumerateDog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Human/Comparators/DateOfBirthComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Human/Comparators/NameComparator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FamilyTree/FamilyTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FamilyTree/FamilyTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Human/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,19 +44,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/Users/aleksejdemkin/Downloads/FamilyTree/src/Dogs",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/aleksejdemkin/Downloads/FamilyTree/src/Dogs&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Dogs" />
       <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Dogs" />
     </key>
   </component>
   <component name="RunManager">

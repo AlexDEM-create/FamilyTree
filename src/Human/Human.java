@@ -146,18 +146,6 @@ public class Human implements Serializable {
     }
 
 
-    public static class  DateOfBirthComparator implements Comparator<Human>{
-        @Override
-        public int compare(Human o1, Human o2) {
-            return o1.dob.compareTo(o2.dob);
-        }
-    }
-    public static class  NameComparator implements Comparator<Human>{
-        @Override
-        public int compare(Human o1, Human o2) {
-            return o1.name.compareTo(o2.name);
-        }
-    }
     @Override
 
     public boolean equals(Object obj) {

@@ -1,3 +1,4 @@
+import Dogs.Dog;
 import FamilyTree.FamilyTree;
 import Human.Human;
 import Writer.FileHandler;
@@ -53,6 +54,26 @@ public class Main {
         tree.sortByName();
         System.out.println(tree);
 
+
+        Dog dog1 = new Dog("Zevs", Dogs.Gender.Мужской,LocalDate.of(2021, 3, 8));
+        Dog dog2 = new Dog("Riso", Dogs.Gender.Женский,LocalDate.of(2022, 10, 07));
+        Dog dog3 = new Dog("Kay", Dogs.Gender.Мужской,LocalDate.of(2022, 3, 8));
+        Dog dog4 = new Dog("Wasabi", Dogs.Gender.Женский,LocalDate.of(2023, 7, 18));
+        Dog dog5 = new Dog("Naruto", Dogs.Gender.Мужской,LocalDate.of(2024, 5, 13));
+
+        dog4.setFather(dog1);
+        dog4.setMother(dog2);
+        dog5.setFather(dog3);
+        dog1.addChildren(dog4);
+        dog4.addSpouse(dog5);
+
+
+        tree.addHumantoTree(human1);
+        tree.addHumantoTree(human2);
+        tree.addHumantoTree(human3);
+        tree.addHumantoTree(human4);
+        tree.addHumantoTree(human5);
+        tree.addHumantoTree(human6);
             //записываем в файл
 //        String filePath = "MyFamilyTree.txt";
 //        FileHandler fileHandler = new FileHandler();

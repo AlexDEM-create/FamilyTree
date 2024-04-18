@@ -1,5 +1,7 @@
 package FamilyTree;
 
+import Human.Comparators.DateOfBirthComparator;
+import Human.Comparators.NameComparator;
 import Human.Human;
 
 import java.io.Serializable;
@@ -7,15 +9,15 @@ import java.util.*;
 import java.util.function.Consumer;
 
 public class FamilyTree implements Serializable, Iterable<Human> {
-    private List<Human> humanList;
+    private List<Human> ListOfFamily;
 
     public FamilyTree(){
-         humanList = new ArrayList<>();
+         ListOfFamily = new ArrayList<>();
     }
 
     public boolean addHumantoTree (Human human) {
-        if (!humanList.contains(human)){
-            humanList.add(human);
+        if (!ListOfFamily.contains(human)){
+            ListOfFamily.add(human);
             addhumantoParents(human);
             addhumantoChild(human);
         }
@@ -42,8 +44,8 @@ public class FamilyTree implements Serializable, Iterable<Human> {
     public String getInfo(){
         StringBuilder sb = new StringBuilder();
         sb.append("В семейном дереве сейчас: ");
-        sb.append(humanList.size()).append(" Чел."+"\n");
-        for (Human human: humanList) {
+        sb.append(ListOfFamily.size()).append(" Чел."+"\n");
+        for (Human human: ListOfFamily) {
             sb.append(human);
             sb.append("\n");
         }
@@ -52,7 +54,7 @@ public class FamilyTree implements Serializable, Iterable<Human> {
 
     @Override
     public Iterator<Human> iterator() {
-        return humanList.iterator();
+        return ListOfFamily.iterator();
     }
 
     @Override
@@ -66,12 +68,12 @@ public class FamilyTree implements Serializable, Iterable<Human> {
     }
 
     public void sortByDateOfBirth(){
-        Collections.sort(humanList, new Human.DateOfBirthComparator());
+        Collections.sort(ListOfFamily, new DateOfBirthComparator());
 
     }
 
     public void sortByName(){
-        Collections.sort(humanList, new Human.NameComparator());
+        Collections.sort(ListOfFamily, new NameComparator());
 
     }
 }
