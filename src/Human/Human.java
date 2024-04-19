@@ -1,20 +1,22 @@
 package Human;
 
+import FamilyTree.FamilyMember;
+import Human.Comparators.NameWithDob;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.*;
-import java.util.function.*;
 
 
-public class Human implements Serializable {
+public class Human implements Serializable, FamilyMember, NameWithDob {
     private int id;
     private String name;
     private LocalDate dob, dod;
     private Gender gender;
     private Human father, mother;
     private Human spouse;
-    private List<Human> childrenList;
-    private List<Human> parentsList;
+    private List<FamilyMember> childrenList;
+    private List<FamilyMember> parentsList;
 //    public Human.Human(String name, Human.Gender gender, LocalDate dob, LocalDate dod, Object father, Object mother) {
 //    }
 
@@ -46,24 +48,24 @@ public class Human implements Serializable {
             childrenList.add(child);
         }
     }
-    public boolean addParents(Human parent) {
-        if (parentsList.contains(parent)) {
-            return false;
-        }
-        else if (parent.getGender().equals(Gender.Мужской)) {
-            if (father == null){
-                setFather(parent);
-                parentsList.add(parent);
-            }
-        }
-        else if (parent.getGender().equals(Gender.Женский)) {
-            if (mother == null){
-                setMother(parent);
-                parentsList.add(parent);
-            }
-        }
-        return true;
-    }
+//    public boolean addParents(Human parent) {
+//        if (parentsList.contains(parent)) {
+//            return false;
+//        }
+//        else if (parent.getGender().equals(Gender.Мужской)) {
+//            if (father == null){
+//                setFather(parent);
+//                parentsList.add(parent);
+//            }
+//        }
+//        else if (parent.getGender().equals(Gender.Женский)) {
+//            if (mother == null){
+//                setMother(parent);
+//                parentsList.add(parent);
+//            }
+//        }
+//        return true;
+//    }
 //    public boolean addParents(Human parent) {
 //        if (parentsList.contains(parent)) {
 //            return false;
@@ -77,13 +79,29 @@ public class Human implements Serializable {
 //            parentsList.add(parent);
 //        return true;
 //    }
-    public List<Human> getParents(){
+    @Override
+    public List<FamilyMember> getParents(){
         return this.parentsList;
     }
-
-    public List<Human> getChildrenList () {
+    @Override
+    public List<FamilyMember> getChildrenList () {
         return this.childrenList;
     }
+
+    @Override
+    public void addParents(FamilyMember parent) {
+        if(!this.parentsList.contains(parent)){
+            this.parentsList.add(parent);
+        }
+    }
+
+    @Override
+    public void addChildren(FamilyMember child) {
+        if(!this.childrenList.contains(child)){
+            this.childrenList.add(child);
+        }
+    }
+
     public void addSpouse (Human human) {
         spouse=human;
     }
@@ -221,8 +239,8 @@ public class Human implements Serializable {
     }
     sb.append("Дети: ");
     if (childrenList != null && !childrenList.isEmpty()) {
-        for (Human human : childrenList) {
-            sb.append(human.getName());
+        for (FamilyMember unit : childrenList) {
+            sb.append(unit.getName());
         }
     }
     else{

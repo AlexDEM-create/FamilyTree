@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5d49e45-7504-43f4-980c-d3967d178c2d" name="Changes" comment="Создал нормальные конструкторы">
-      <change afterPath="$PROJECT_DIR$/src/Human/Comparators/DateOfBirthComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Human/Comparators/NameComparator.java" afterDir="false" />
+    <list default="true" id="f5d49e45-7504-43f4-980c-d3967d178c2d" name="Changes" comment="Добавил собак">
+      <change afterPath="$PROJECT_DIR$/src/FamilyTree/FamilyMember.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Human/NameWithDob.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dogs/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dogs/Dog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FamilyTree/FamilyTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FamilyTree/FamilyTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Human/Comparators/DateOfBirthComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human/Comparators/DateOfBirthComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Human/Comparators/NameComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human/Comparators/NameComparator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Human/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human/Human.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -24,8 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -87,6 +90,16 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -105,6 +118,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Создал нормальные конструкторы" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создал нормальные конструкторы" />
+    <MESSAGE value="Добавил собак" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил собак" />
   </component>
 </project>

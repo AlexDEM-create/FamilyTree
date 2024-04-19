@@ -8,32 +8,32 @@ import java.io.Serializable;
 import java.util.*;
 import java.util.function.Consumer;
 
-public class FamilyTree implements Serializable, Iterable<Human> {
-    private List<Human> ListOfFamily;
+public class FamilyTree<T extends FamilyMember> implements Serializable, Iterable<T> {
+    private List<T> ListOfFamily;
 
     public FamilyTree(){
          ListOfFamily = new ArrayList<>();
     }
 
-    public boolean addHumantoTree (Human human) {
-        if (!ListOfFamily.contains(human)){
-            ListOfFamily.add(human);
-            addhumantoParents(human);
-            addhumantoChild(human);
+    public boolean addMembertoTree (T Member) {
+        if (!ListOfFamily.contains(Member)){
+            ListOfFamily.add(Member);
+            addMembertoParents(Member);
+            addMembertoChild(Member);
         }
             return true;
     }
 
-    private boolean addhumantoChild(Human human) {
-        for(Human child: human.getChildrenList()){
-            child.addParents(human);
+    private boolean addMembertoChild(FamilyMember Member) {
+        for(FamilyMember child: Member.getChildrenList()){
+            child.addParents(Member);
         }
         return true;
     }
 
-    private void addhumantoParents(Human human) {
-        for(Human parent: human.getParents()){
-            parent.addChildren(human);
+    private void addMembertoParents(FamilyMember Member) {
+        for(FamilyMember parent: Member.getParents()){
+            parent.addChildren(Member);
         }
     }
 
@@ -45,25 +45,25 @@ public class FamilyTree implements Serializable, Iterable<Human> {
         StringBuilder sb = new StringBuilder();
         sb.append("В семейном дереве сейчас: ");
         sb.append(ListOfFamily.size()).append(" Чел."+"\n");
-        for (Human human: ListOfFamily) {
-            sb.append(human);
+        for (T Member: ListOfFamily) {
+            sb.append(Member);
             sb.append("\n");
         }
         return sb.toString();
     }
 
     @Override
-    public Iterator<Human> iterator() {
+    public Iterator<T> iterator() {
         return ListOfFamily.iterator();
     }
 
     @Override
-    public Spliterator<Human> spliterator() {
+    public Spliterator<T> spliterator() {
         return Iterable.super.spliterator();
     }
 
     @Override
-    public void forEach(Consumer<? super Human> action) {
+    public void forEach(Consumer<? super T> action) {
         Iterable.super.forEach(action);
     }
 

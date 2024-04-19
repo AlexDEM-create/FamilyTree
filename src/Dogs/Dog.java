@@ -1,5 +1,8 @@
 package Dogs;
 
+import FamilyTree.FamilyMember;
+import Human.Comparators.NameWithDob;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -8,15 +11,15 @@ import java.util.List;
 import java.util.Objects;
 
 
-public class Dog implements Serializable {
+public class Dog implements Serializable,FamilyMember, NameWithDob {
     private int id;
     private String name;
     private LocalDate dob, dod;
     private Gender gender;
     private Dog father, mother;
     private Dog spouse;
-    private List<Dog> childrenList;
-    private List<Dog> parentsList;
+    private List<FamilyMember> childrenList;
+    private List<FamilyMember> parentsList;
 //    public Human.Human(String name, Human.Gender gender, LocalDate dob, LocalDate dod, Object father, Object mother) {
 //    }
 
@@ -79,13 +82,24 @@ public class Dog implements Serializable {
 //            parentsList.add(parent);
 //        return true;
 //    }
-    public List<Dog> getParents(){
+    public List<FamilyMember> getParents(){
         return this.parentsList;
     }
 
-    public List<Dog> getChildrenList () {
+    public List<FamilyMember> getChildrenList () {
         return this.childrenList;
     }
+
+    @Override
+    public void addParents(FamilyMember parent) {
+
+    }
+
+    @Override
+    public void addChildren(FamilyMember child) {
+
+    }
+
     public void addSpouse (Dog dog) {
         spouse= dog;
     }
@@ -235,8 +249,8 @@ public class Dog implements Serializable {
     }
     sb.append("Дети: ");
     if (childrenList != null && !childrenList.isEmpty()) {
-        for (Dog dog : childrenList) {
-            sb.append(dog.getName());
+        for (FamilyMember member : childrenList) {
+            sb.append(member.getName());
         }
     }
     else{
